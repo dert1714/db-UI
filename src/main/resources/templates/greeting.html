@@ -5,6 +5,23 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 <body>
-<p th:text="'Hello, ' + ${name} + '!'" />
+    <p th:text="'Hello, ' + ${name} + '!'" />
+    <p>эта страница предназначена для работы с базой данных, описывающей характеристики метеостанций.</p>
+    <form action="/read">  <!-- URI для отображения таблицы-->
+        <p>Для того чтобы получить текущее состояние базы - нажмите кнопку</p>
+        <p><input type="submit" name="getDB" value="состояние"/></p>
+    </form>>
+    <form action="/create">  <!-- URI для добавления новых данных-->
+        <p>Для того чтобы добавить описание новой метеостанции - нажмите кнопку</p>
+        <p><input type="submit" name="createRow" value="добавить"/></p>
+    </form>>
+    <form action="/update">  <!-- URI для обнавления данных-->
+        <p>Для того чтобы обновить описание имеющейся метеостанции - нажмите кнопку</p>
+        <p><input type="submit" name="updateRow" value="обновить"/></p>
+    </form>>
+    <form action="/delete">  <!-- URI для удаления данных-->
+        <p>Для того чтобы удалить данные о метеостанции - нажмите кнопку</p>
+        <p><input type="submit" name="deleteRow" value="удалить"/></p>
+    </form>>
 </body>
 </html>
