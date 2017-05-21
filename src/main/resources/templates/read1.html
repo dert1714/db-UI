@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Getting Started: Serving Web Content</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<form action="/">
+    <table border="1">
+        <tr>
+            <th>name</th>
+            <th>Region</th>
+            <th>Hbar</th>
+        </tr>
+        <tr th:each="string : ${strings}">
+            <td th:each="a : ${string}"><p th:text="${a}" /></td>
+        </tr>
+    </table>
+    <p><input type="submit" value="Вернуться"/></p>
+</form>
+</body>
+</html>
