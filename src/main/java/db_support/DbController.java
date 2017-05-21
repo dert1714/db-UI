@@ -24,8 +24,6 @@ public class DbController {
 
     @RequestMapping("/read")
     public String read(@RequestParam(value="tableName", required=false, defaultValue="stations") String name, Model model) throws SQLException, ClassNotFoundException {
-        model.addAttribute("name", "Yana");
-        ArrayList<String> ar = new ArrayList<>(Arrays.asList("one", "two", "ten", "aga"));
         Connection con = RequestCreator.getDbConnection();
         ArrayList a = db.selectRequest(con,"weather");
         model.addAttribute("strings", a);
